@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.action.extension" value="com"></constant>
+    <package name="HelloStrut" extends="struts-default">
+        <action name="edit" class="com.asm.action.EventAction" method="edit">
+            <result name="success">/create-event.jsp</result>
+        </action>
+        <action name="delete" class="com.asm.action.EventAction" method="deleteEvent">
+            <result name="success">/store.com</result>
+        </action>
+        <action name="create-event" class="com.asm.action.EventAction" method="createEvent">
+            <result name="success">/create-event.jsp</result>
+            <result name="input">/create-event.jsp</result>
+        </action>
+        <action name="store" class="com.asm.action.EventAction" method="store">
+            <result name="success">/list-event.jsp</result>
+            <result name="input">/create-event.jsp</result>
+            <result name="Info">/new-event.com</result>
+        </action>
+    </package>
+</struts>
